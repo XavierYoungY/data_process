@@ -2,13 +2,15 @@ import os
 import json
 import cv2
 
-img_folder = ''
+img_folder = '/media/yy/datasets/jd/allpic/'
 
 all_anns = {}
-
-with open('ann.txt', 'r') as f:
+count=0
+with open('convert/ann.txt', 'r') as f:
     anns = f.readlines()
     for ann in anns:
+        count+=1
+        print(count)
         ann = ann.split()
         file_name = ann[0]
         img_path = img_folder + file_name
@@ -28,5 +30,5 @@ with open('ann.txt', 'r') as f:
         except:
             print(file_name+' does not exit!----------')
 
-with open('ann.json','w') as f: 
+with open('ann.json','w') as f:
     json.dump(all_anns,f)
