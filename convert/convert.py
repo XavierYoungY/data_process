@@ -96,4 +96,7 @@ if __name__ == "__main__":
                 bbox = list(map(int, _))
                 addAnnoItem(object_name, current_image_id, current_category_id,
                             bbox)
-        pass
+
+
+    with open('jd.json','w') as f:
+        json.dump(coco,f)
