@@ -24,7 +24,7 @@ with open('convert/ann.txt', 'r') as f:
             all_anns[file_name]['bboxes']=[]
             bboxes=ann[1:]
             for i in range(len(bboxes) // 5):
-                box=bboxes[i:i+5]
+                box=bboxes[5*i:5*i+5]
                 all_anns[file_name]['bboxes'].append(box)
 
         except:

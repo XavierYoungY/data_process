@@ -1,3 +1,5 @@
 voc/
 CenterNet-master/
 *vscode*
+.vscode/settings.json
+*launch*
