@@ -1,6 +1,6 @@
 import os
 import json
 
-with open('test.json','r') as f:
-    coco=json.load(f)
+with open('jd.json', 'r') as f:
+    anns = json.load(f)
     pass
