@@ -173,6 +173,6 @@ def parseXmlFiles(xml_path):
 
 if __name__ == '__main__':
     xml_path = 'voc'  # 这是xml文件所在的地址
-    json_file = 'test.json'                                     # 这是你要生成的json文件
+    json_file = 'voc.json'                                     # 这是你要生成的json文件
     parseXmlFiles(xml_path)                                       # 只需要改动这两个参数就行了
     json.dump(coco, open(json_file, 'w'))
